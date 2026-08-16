@@ -1036,6 +1036,7 @@ footer .copyright {
         justify-content: flex-start;
         color: #3a2f2b;
         max-width: 52%;
+        margin-left: 2px;
     }
 
     .logo img {
@@ -1064,6 +1065,7 @@ footer .copyright {
         flex-wrap: nowrap;
         min-width: fit-content;
         margin-left: auto;
+        margin-right: 4px;
     }
 
     nav a {
@@ -1073,6 +1075,7 @@ footer .copyright {
         padding: 4px 0;
         color: #382f2d;
         font-weight: 500;
+        margin-left: 2px;
     }
 
     nav a:hover {
