@@ -1006,9 +1006,10 @@ footer .copyright {
     .about-section,
     .contact-section,
     footer {
+        width: 100%;
         max-width: 430px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     header {
