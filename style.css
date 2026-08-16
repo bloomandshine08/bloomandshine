@@ -1027,7 +1027,7 @@ footer .copyright {
     }
 
     .logo {
-        flex: 1 1 auto;
+        flex: 0 0 auto;
         min-width: 0;
         font-size: 22px;
         line-height: 0.9;
@@ -1035,8 +1035,8 @@ footer .copyright {
         white-space: nowrap;
         justify-content: flex-start;
         color: #3a2f2b;
-        max-width: 62%;
-        margin-right: 4px;
+        max-width: none;
+        margin-right: 0;
     }
 
     .logo img {
@@ -1048,20 +1048,20 @@ footer .copyright {
     .brand-name {
         display: inline-block;
         color: #3c2d29;
-        font-size: clamp(1.7rem, 5vw, 2.3rem);
+        font-size: clamp(1.5rem, 4.8vw, 2.1rem);
         line-height: 0.9;
         letter-spacing: 0.01em;
         transform: translateY(1px);
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: visible;
+        text-overflow: clip;
     }
 
     nav {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 10px;
+        gap: 8px;
         flex-wrap: nowrap;
         min-width: fit-content;
         margin-left: auto;
@@ -1069,7 +1069,7 @@ footer .copyright {
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 11px;
         line-height: 1.2;
         letter-spacing: 0.02em;
         padding: 4px 0;
