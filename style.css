@@ -990,6 +990,20 @@ footer .copyright {
 
     .logo {
         font-size: 24px;
+        line-height: 0.9;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
+    .logo img {
+        max-height: 30px;
+    }
+
+    .logo span {
+        display: inline-block;
+        letter-spacing: 0.04em;
+        line-height: 0.9;
+        transform: translateY(1px);
     }
 
     nav {
