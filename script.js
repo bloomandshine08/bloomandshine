@@ -89,6 +89,46 @@ function filterProducts(category) {
 // CAROUSEL FUNCTIONS
 // ===============================
 
+function buildCarouselImagePath(carouselNum, imageNum) {
+    if (carouselNum === 1) return `images/${imageNum}.jpeg`;
+    if (carouselNum === 2) return `images/golden-heart-${imageNum}.jpeg`;
+    if (carouselNum === 3) return `images/korean-style-${imageNum}.jpeg`;
+    if (carouselNum === 4) return `images/tulip-pendant-${imageNum}.jpg`;
+    if (carouselNum === 5) return `images/sleek-bar-${imageNum}.jpg`;
+    if (carouselNum === 6) return `images/necklace-earring-170-${imageNum}.png`;
+    if (carouselNum === 7) return `images/Classic French Tip Press-On Nails/${imageNum}.jpeg`;
+    if (carouselNum === 8) {
+        let path = `images/Necklace With Earring 2/${imageNum}.jpeg`;
+        if (imageNum === 2 || imageNum === 3 || imageNum === 5 || imageNum === 6) {
+            path = `images/Necklace With Earring 2/${imageNum}.png`;
+        }
+        return path;
+    }
+    if (carouselNum === 9) return `images/Heart Bracelet With Necklace/${imageNum}.jpg`;
+    return `images/product-${carouselNum}-${imageNum}.jpeg`;
+}
+
+function preloadCarouselImages() {
+    const imageRanges = {
+        1: [1, 2, 3, 4, 5],
+        2: [1, 2, 3, 4],
+        3: [1, 2, 3, 4],
+        4: [1, 2, 3],
+        5: [1, 2, 3],
+        6: [1, 2, 3, 4],
+        7: [1, 2, 3, 4],
+        8: [1, 2, 3, 4, 5, 6],
+        9: [1, 2, 3, 4]
+    };
+
+    Object.entries(imageRanges).forEach(([carouselNum, range]) => {
+        range.forEach((imageNum) => {
+            const img = new Image();
+            img.src = buildCarouselImagePath(Number(carouselNum), imageNum);
+        });
+    });
+}
+
 function changeCarouselImage(carouselNum, direction) {
     const container = document.querySelector(`[data-carousel="${carouselNum}"]`);
     if (!container) return;
@@ -113,35 +153,18 @@ function setCarouselImage(carouselNum, imageNum) {
     const dots = container.querySelectorAll('.dot');
     
     if (!img) return;
-    
-    // Determine image path based on carousel number
-    let imagePath = '';
-    if (carouselNum === 1) {
-        imagePath = `images/${imageNum}.jpeg`;
-    } else if (carouselNum === 2) {
-        imagePath = `images/golden-heart-${imageNum}.jpeg`;
-    } else if (carouselNum === 3) {
-        imagePath = `images/korean-style-${imageNum}.jpeg`;
-    } else if (carouselNum === 4) {
-        imagePath = `images/tulip-pendant-${imageNum}.jpg`;
-    } else if (carouselNum === 5) {
-        imagePath = `images/sleek-bar-${imageNum}.jpg`;
-    } else if (carouselNum === 6) {
-        imagePath = `images/necklace-earring-170-${imageNum}.png`;
-    } else if (carouselNum === 7) {
-        imagePath = `images/Classic French Tip Press-On Nails/${imageNum}.jpeg`;
-    } else if (carouselNum === 8) {
-        imagePath = `images/Necklace With Earring 2/${imageNum}.jpeg`;
-        if (imageNum === 2 || imageNum === 3 || imageNum === 5 || imageNum === 6) {
-            imagePath = `images/Necklace With Earring 2/${imageNum}.png`;
-        }
-    } else if (carouselNum === 9) {
-        imagePath = `images/Heart Bracelet With Necklace/${imageNum}.jpg`;
-    } else {
-        imagePath = `images/product-${carouselNum}-${imageNum}.jpeg`;
-    }
-    
-    img.src = imagePath;
+
+    const imagePath = buildCarouselImagePath(carouselNum, imageNum);
+    img.style.opacity = '0.4';
+    img.style.transition = 'opacity 120ms ease';
+
+    const nextImage = new Image();
+    nextImage.onload = () => {
+        img.src = imagePath;
+        img.style.opacity = '1';
+    };
+    nextImage.src = imagePath;
+
     container.dataset.index = imageNum;
     
     dots.forEach((dot, index) => {
@@ -151,6 +174,8 @@ function setCarouselImage(carouselNum, imageNum) {
         }
     });
 }
+
+window.addEventListener('load', preloadCarouselImages);
 
 
 // ===============================
