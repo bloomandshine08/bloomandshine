@@ -668,6 +668,7 @@ footer p {
     color: #d4a373;
     font-weight: 700;
     margin: 6px 0 18px;
+    margin-top: auto;
     font-family: "Poppins", Arial, sans-serif;
 }
 
@@ -1231,6 +1232,7 @@ footer .copyright {
     .price {
         font-size: 18px;
         margin: 4px 0 12px;
+        margin-top: auto;
     }
 
     .order-button {
