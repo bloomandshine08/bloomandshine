@@ -1181,8 +1181,45 @@ footer .copyright {
     }
 
     .products {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 25px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .product-card {
+        min-height: 260px;
+    }
+
+    .product-image {
+        height: 190px;
+    }
+
+    .carousel-container {
+        height: 190px;
+    }
+
+    .product-info {
+        padding: 12px 12px 14px;
+    }
+
+    .product-category {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .product-info h3 {
+        font-size: 24px;
+        min-height: 46px;
+        line-height: 1.05;
+    }
+
+    .price {
+        font-size: 18px;
+        margin: 4px 0 10px;
+    }
+
+    .order-button {
+        padding: 10px 12px;
+        font-size: 12px;
     }
 
     .about-section {
