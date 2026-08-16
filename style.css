@@ -1006,10 +1006,9 @@ footer .copyright {
     .about-section,
     .contact-section,
     footer {
-        width: 100%;
         max-width: 430px;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     header {
@@ -1036,8 +1035,8 @@ footer .copyright {
         white-space: nowrap;
         justify-content: flex-start;
         color: #3a2f2b;
-        max-width: 52%;
-        margin-left: 2px;
+        max-width: 54%;
+        margin-right: 6px;
     }
 
     .logo img {
@@ -1049,7 +1048,7 @@ footer .copyright {
     .brand-name {
         display: inline-block;
         color: #3c2d29;
-        font-size: clamp(1.4rem, 4.2vw, 2rem);
+        font-size: clamp(1.6rem, 4.8vw, 2.2rem);
         line-height: 0.9;
         letter-spacing: 0.01em;
         transform: translateY(1px);
@@ -1062,11 +1061,11 @@ footer .copyright {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 10px;
+        gap: 12px;
         flex-wrap: nowrap;
         min-width: fit-content;
         margin-left: auto;
-        margin-right: 4px;
+        padding-left: 8px;
     }
 
     nav a {
@@ -1076,7 +1075,6 @@ footer .copyright {
         padding: 4px 0;
         color: #382f2d;
         font-weight: 500;
-        margin-left: 2px;
     }
 
     nav a:hover {
