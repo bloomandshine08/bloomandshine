@@ -995,11 +995,27 @@ footer .copyright {
 
 @media (max-width: 768px) {
 
+    body {
+        background: #f6f0ea;
+    }
+
+    header,
+    .hero,
+    .categories-section,
+    .shop-section,
+    .about-section,
+    .contact-section,
+    footer {
+        max-width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     header {
         width: 100%;
-        margin: 0;
-        padding: 10px 16px 8px;
-        min-height: 62px;
+        margin-top: 0;
+        padding: 12px 18px 10px;
+        min-height: 70px;
         gap: 8px;
         border-radius: 0;
         background: rgba(255, 250, 247, 0.98);
@@ -1029,7 +1045,7 @@ footer .copyright {
     .brand-name {
         display: inline-block;
         color: #3c2d29;
-        font-size: clamp(1.3rem, 4vw, 1.85rem);
+        font-size: clamp(1.7rem, 5vw, 2.4rem);
         line-height: 1;
         letter-spacing: 0.01em;
         transform: translateY(1px);
@@ -1039,13 +1055,13 @@ footer .copyright {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 12px;
+        gap: 14px;
         flex-wrap: nowrap;
         min-width: fit-content;
     }
 
     nav a {
-        font-size: 11.5px;
+        font-size: 12px;
         line-height: 1.2;
         letter-spacing: 0.02em;
         padding: 4px 0;
@@ -1059,6 +1075,80 @@ footer .copyright {
 
     nav a::after {
         background: #b8865b;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 22px 18px 30px;
+        background:
+            linear-gradient(
+                rgba(30, 42, 54, 0.72),
+                rgba(30, 42, 54, 0.72)
+            ),
+            url('images/cover.jpg') center/cover no-repeat;
+    }
+
+    .hero-content {
+        padding: 10px 0 0;
+        max-width: 100%;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 0.5em;
+        margin-bottom: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 10vw, 5rem);
+        line-height: 0.82;
+        margin-bottom: 18px;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+        max-width: 420px;
+    }
+
+    .main-button {
+        width: min(100%, 300px);
+        padding: 16px 28px;
+        font-size: 18px;
+        border-radius: 999px;
+        margin-top: 8px;
+    }
+
+    .categories-section,
+    .shop-section,
+    .about-section,
+    .contact-section {
+        padding: 50px 18px 30px;
+    }
+
+    .categories {
+        gap: 14px;
+        justify-content: center;
+    }
+
+    .categories button {
+        flex: 1 1 45%;
+        min-width: 0;
+        padding: 14px 14px;
+        border-radius: 999px;
+        font-size: 16px;
+    }
+
+    #shop .section-title h2 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin-bottom: 12px;
+    }
+
+    #shop .section-title > p:last-child {
+        font-size: clamp(1.4rem, 5vw, 2.2rem);
+        line-height: 1.2;
     }
 
     .hero {
