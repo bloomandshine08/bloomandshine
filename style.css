@@ -1048,13 +1048,13 @@ footer .copyright {
     .brand-name {
         display: inline-block;
         color: #3c2d29;
-        font-size: clamp(2.2rem, 7vw, 3.2rem);
+        font-size: clamp(1.7rem, 5vw, 2.3rem);
         line-height: 0.9;
         letter-spacing: 0.01em;
         transform: translateY(1px);
         white-space: nowrap;
-        overflow: visible;
-        text-overflow: clip;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     nav {
