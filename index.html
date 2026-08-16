@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bloom & Shine | Elegant Jewelry</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            <img src="images/logo.png" alt="Bloom & Shine" onerror="this.style.display='none'">
+            <span style="display: var(--logo-text, inline); color: #b8865b; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 700; letter-spacing: 1px;">Bloom & Shine</span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <img
+                src="images/cover.jpg"
+                alt="Bloom & Shine"
+                class="cover-image"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    BLOOM & SHINE
+                </p>
+
+                <h1>
+                    Jewelry that makes
+                    <span>you shine.</span>
+                </h1>
+
+                <p>
+                    Elegant jewelry for every beautiful moment.
+                </p>
+
+                <a href="#shop" class="main-button">
+                    Shop Collection
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories-section">
+
+            <div class="section-title">
+
+                <p class="small-title">
+                    EXPLORE
+                </p>
+
+                <h2>
+                    Shop By Category
+                </h2>
+
+                <p>
+                    Find something beautiful for every style.
+                </p>
+
+            </div>
+
+
+            <div class="categories">
+
+                <button onclick="filterProducts('all')">
+                    All Jewelry
+                </button>
+
+                <button onclick="filterProducts('bracelets')">
+                    Bracelets
+                </button>
+
+                <button onclick="filterProducts('necklaces')">
+                    Necklaces
+                </button>
+
+                <button onclick="filterProducts('earrings')">
+                    Earrings
+                </button>
+
+                <button onclick="filterProducts('rings')">
+                    Rings
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SHOP ================= -->
+
+        <section id="shop" class="shop-section">
+
+            <div class="section-title">
+
+                <p class="small-title">
+                    OUR COLLECTION
+                </p>
+
+                <h2>
+                    Featured Jewelry
+                </h2>
+
+                <p>
+                    Discover pieces made to add a little more sparkle to your day.
+                </p>
+
+            </div>
+
+
+            <div class="products" id="productContainer">
+
+                <!-- PRODUCT 1 -->
+
+                <div class="product-card" data-category="bracelets">
+
+                    <div class="product-image carousel-container" data-carousel="1" data-index="1">
+                        <img class="carousel-main-img" src="images/1.jpeg" alt="Tulip Bracelet" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(1, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(1, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(1, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(1, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(1, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(1, 4)"></span>
+                            <span class="dot" onclick="setCarouselImage(1, 5)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Bracelet
+                        </p>
+
+                        <h3>
+                            Tulip Bracelet
+                        </h3>
+
+                        <p class="price">
+                            ৳280
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Tulip Bracelet',
+                                'Bracelet',
+                                '৳280',
+                                '🌷 Tulip Bracelet — A little elegance, a lot of shine. ✨ Designed with a delicate tulip-inspired look, sparkling pink stones, and an elegant golden finish—perfect for adding a graceful touch to any outfit. 💕 Perfect for yourself or as a beautiful gift for someone special. 🎁 🌸 Bloom & Shine ✨ Elegance that makes you shine'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="product-card" data-category="necklaces">
+
+                    <div class="product-image carousel-container" data-carousel="2" data-index="1">
+                        <img class="carousel-main-img" src="images/golden-heart-1.jpeg" alt="Golden Heart Necklace" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(2, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(2, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(2, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(2, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(2, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(2, 4)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Necklace
+                        </p>
+
+                        <h3>
+                            Golden Heart Necklace
+                        </h3>
+
+                        <p class="price">
+                            ৳260
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Golden Heart Necklace',
+                                'Necklace',
+                                '৳260',
+                                '✨ A Love That Never Goes Out of Style ✨\nMake every moment special with our elegant Heart Locket Necklace ❤️\nPerfect for gifting someone special—or treating yourself. 🎁\n\n💛 Elegant & timeless design\n💛 Perfect for couples & loved ones\n💛 A beautiful everyday accessory'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="product-card" data-category="earrings">
+
+                    <div class="product-image carousel-container" data-carousel="3" data-index="1">
+                        <img class="carousel-main-img" src="images/korean-style-1.jpeg" alt="Korean Style Earrings" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(3, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(3, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(3, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(3, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(3, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(3, 4)"></span>
+                            <span class="dot" onclick="setCarouselImage(3, 5)"></span>
+                            <span class="dot" onclick="setCarouselImage(3, 6)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Earrings
+                        </p>
+
+                        <h3>
+                            Korean Style Earrings
+                        </h3>
+
+                        <p class="price">
+                            ৳80
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Korean Style Earrings',
+                                'Earrings',
+                                '৳80',
+                                'Minimalist, elegant, and effortlessly trendy! ✨ Upgrade your everyday look with Korean-style earrings from Bloom and Shine. minimum order 2 pair.'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="product-card" data-category="necklaces">
+
+                    <div class="product-image carousel-container" data-carousel="4" data-index="1">
+                        <img class="carousel-main-img" src="images/tulip-pendant-1.jpg" alt="Tulip Pendant Necklace" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(4, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(4, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(4, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(4, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(4, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(4, 4)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Necklace
+                        </p>
+
+                        <h3>
+                            Tulip Pendant Necklace
+                        </h3>
+
+                        <p class="price">
+                            ৳260
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Tulip Pendant Necklace',
+                                'Necklace',
+                                '৳260',
+                                '✨ Elegance that speaks for itself ✨\nAdd a touch of timeless elegance to your look with our Elegant Black & Gold Tulip Pendant Necklace. 🖤✨\n\n🌸 Stylish & Minimal Design\n✨ Perfect for Everyday & Special Occasions\n🎁 A perfect gift for someone special.'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 5 -->
+
+                <div class="product-card" data-category="necklaces">
+
+                    <div class="product-image carousel-container" data-carousel="5" data-index="1">
+                        <img class="carousel-main-img" src="images/sleek-bar-1.jpg" alt="Sleek Bar Pendant" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(5, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(5, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(5, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(5, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(5, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(5, 4)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Necklace
+                        </p>
+
+                        <h3>
+                            Sleek Bar Pendant
+                        </h3>
+
+                        <p class="price">
+                            ৳260
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Sleek Bar Pendant',
+                                'Necklace',
+                                '৳260',
+                                'A story of quiet luxury, written in gold. 📖✨ Pair your daily mood with the timeless simplicity of our sleek bar pendant. Designed for those who appreciate subtle beauty—let your charm Bloom and Shine.'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 6 -->
+
+                <div class="product-card" data-category="necklaces">
+
+                    <div class="product-image carousel-container" data-carousel="6" data-index="1">
+                        <img class="carousel-main-img" src="images/necklace-earring-170-1.png" alt="Necklace With Earring" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(6, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(6, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(6, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(6, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(6, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(6, 4)"></span>
+                            <span class="dot" onclick="setCarouselImage(6, 5)"></span>
+                            <span class="dot" onclick="setCarouselImage(6, 6)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Necklace
+                        </p>
+
+                        <h3>
+                            Necklace With Earring
+                        </h3>
+
+                        <p class="price">
+                            ৳170
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Necklace With Earring',
+                                'Necklace',
+                                '৳170',
+                                'Small details. Big difference. ✨\n\nA perfect Earring & Necklace Combo to add that effortless touch of elegance to your everyday look. 🤍\n\nWear it. Style it. Shine your way. ✨\n\nBloom & Shine\nWhere every little detail shines. 💫'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 7 -->
+
+                <div class="product-card" data-category="nails">
+
+                    <div class="product-image carousel-container" data-carousel="7" data-index="1">
+                        <img class="carousel-main-img" src="images/Classic French Tip Press-On Nails/1.jpeg" alt="Classic French Tip Press-On Nails" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(7, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(7, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(7, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(7, 2)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Nails
+                        </p>
+
+                        <h3>
+                            Classic French Tip Press-On Nails
+                        </h3>
+
+                        <p class="price">
+                            ৳120
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Classic French Tip Press-On Nails',
+                                'Nails',
+                                '৳120',
+                                'Elegance at your fingertips! ✨🌸\nSay goodbye to expensive salon visits! Our new Shimmer French Manicure Press-On Set brings you instant glam with zero hassle. Perfect for everyday wear, special occasions, or whenever you want your hands to bloom & shine!\n\nWhy you’ll love them:\nEasy to apply & remove\nPremium quality & reusable\nInstant French manicure look.'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 8 -->
+
+                <div class="product-card" data-category="necklaces">
+
+                    <div class="product-image carousel-container" data-carousel="8" data-index="1">
+                        <img class="carousel-main-img" src="images/Necklace With Earring 2/1.jpeg" alt="Necklace With Earring" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(8, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(8, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(8, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(8, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(8, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(8, 4)"></span>
+                            <span class="dot" onclick="setCarouselImage(8, 5)"></span>
+                            <span class="dot" onclick="setCarouselImage(8, 6)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Necklace
+                        </p>
+
+                        <h3>
+                            Necklace With Earring
+                        </h3>
+
+                        <p class="price">
+                            ৳200
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Necklace With Earring',
+                                'Necklace',
+                                '৳200',
+                                'Elegance, all in one set. ✨\nComplete your look with our beautiful Earrings & Necklace Combo 💍✨\n\nPerfect for parties, date nights, special occasions, or simply adding a touch of elegance to your everyday style. 💜\n\n💎 Elegant • Stylish • Classy\n🎁 Perfect for yourself or as a beautiful gift for someone special.\n✨ Bloom & Shine — Shine Your Style.'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 9 -->
+
+                <div class="product-card" data-category="bracelets">
+
+                    <div class="product-image carousel-container" data-carousel="9" data-index="1">
+                        <img class="carousel-main-img" src="images/Heart Bracelet With Necklace/1.jpg" alt="Heart Bracelet With Necklace" style="display: block;">
+                        <button class="carousel-btn prev" onclick="changeCarouselImage(9, -1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeCarouselImage(9, 1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="setCarouselImage(9, 1)"></span>
+                            <span class="dot" onclick="setCarouselImage(9, 2)"></span>
+                            <span class="dot" onclick="setCarouselImage(9, 3)"></span>
+                            <span class="dot" onclick="setCarouselImage(9, 4)"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Bracelet
+                        </p>
+
+                        <h3>
+                            Heart Bracelet With Necklace
+                        </h3>
+
+                        <p class="price">
+                            ৳350
+                        </p>
+
+                        <button
+                            class="order-button"
+                            onclick="openProduct(
+                                'Heart Bracelet With Necklace',
+                                'Bracelet',
+                                '৳350',
+                                '💖 A perfect combo made with love! ✨\n\nIntroducing the Heart Bracelet & Heart Necklace Combo from Bloom & Shine — featuring an elegant heart design with a delicate shine for a classy, timeless look. 🌸\n\n🎁 Perfect for yourself or as a beautiful gift for someone special!\n✨ Stylish • Elegant • Perfect Gift.'
+                            )"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="about-section">
+
+            <div class="about-image">
+
+                <img src="images/logo.png" alt="Bloom & Shine" onerror="this.style.display='none'">
+                <div style="display: none;" id="aboutFallback" style="text-align: center;">
+                    <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 48px; font-weight: 700; color: #b8865b; margin: 20px 0;">Bloom & Shine</p>
+                    <p style="font-size: 16px; color: #b8865b; font-weight: 600; letter-spacing: 2px;">JEWELRY</p>
+                </div>
+            </div>
+
+
+            <div class="about-content">
+
+                <p class="small-title">
+                    ABOUT BLOOM & SHINE
+                </p>
+
+                <h2>
+                    Bloom with grace,
+                    shine with confidence.
+                </h2>
+
+                <p>
+                    At Bloom & Shine, we believe jewelry is more than
+                    an accessory. It is a small detail that can make
+                    you feel beautiful, confident and special.
+                </p>
+
+                <p>
+                    Our collection is created for everyday elegance,
+                    special occasions and all the beautiful moments
+                    in between.
+                </p>
+
+                <a href="#shop" class="main-button">
+                    Explore Jewelry
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="contact-section">
+
+            <p class="small-title">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Let's make you shine.
+            </h2>
+
+            <p>
+                Have a question about a product? Contact us directly on
+                WhatsApp or email us.
+            </p>
+
+            <a
+                href="https://wa.me/YOUR_NUMBER"
+                target="_blank"
+                class="whatsapp-button"
+            >
+                Order on WhatsApp
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= PRODUCT POPUP ================= -->
+
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-button"
+                onclick="closeProduct()"
+            >
+                ×
+            </button>
+
+            <div class="modal-gallery">
+                <img id="modalImage" src="" alt="Product preview">
+                <div id="modalThumbs" class="modal-thumbs"></div>
+            </div>
+
+            <p
+                id="modalCategory"
+                class="product-category"
+            ></p>
+
+            <h2 id="modalName"></h2>
+
+            <p
+                id="modalPrice"
+                class="modal-price"
+            ></p>
+
+            <p id="modalDescription"></p>
+
+            <a
+                id="modalOrder"
+                href="#"
+                target="_blank"
+                class="whatsapp-button"
+            >
+                Order Now on WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <img src="images/logo.png" alt="Bloom & Shine" class="footer-logo" onerror="this.style.display='none'">
+        <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 700; color: #d4a373; margin-bottom: 10px; display: none;" id="footerLogo">
+            Bloom & Shine
+        </p>
+
+        <p>
+            Bloom & Shine
+        </p>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@bloomandshine8" target="_blank" title="Follow us on TikTok">
+                <img src="images/tiktok.png?v=3" alt="TikTok" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/bloomandshine8" target="_blank" title="Follow us on Facebook">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="https://instagram.com/bloomandshine8" target="_blank" title="Follow us on Instagram">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 1 1 0 12.324 6.162 6.162 0 0 1 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                </svg>
+            </a>
+        </div>
+
+        <a href="mailto:bloomandshine08@gmail.com" class="footer-email-link">
+            <svg class="social-icon footer-email-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            bloomandshine08@gmail.com
+        </a>
+
+        <p class="copyright">
+            © 2026 Bloom & Shine. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
